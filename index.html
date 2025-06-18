@@ -168,87 +168,39 @@
     <script>
         // 1. 화학물질별 MSDS 정보 및 사진 경로
         const msdsData = {
-            "다이클로로메테인": {
-                chemNameKor: "다이클로로메테인",
+            "폴리비닐알콜": {
+                chemNameKor: "폴리비닐알콜",
                 casNo: "75-09-2",
                 hazardInfo: "흡입 시 중추신경계 영향, 피부·눈 자극, 인화성 낮음",
                 firstAid: "노출 시 즉시 신선한 공기로 이동, 피부 접촉 시 물로 세척, 증상 지속 시 의사 진료",
                 precaution: "환기 필수, 보호장비 착용, 불꽃·열기 주의",
-                img: "img/msds_다이클로로메테인.jpg"
+                img: "img/msds_폴리비닐알콜.jpg"
             },
-            "에탄올": {
-                chemNameKor: "에탄올",
+            "아이소옥탄": {
+                chemNameKor: "아이소옥탄",
                 casNo: "64-17-5",
                 hazardInfo: "매우 인화성, 눈·피부 자극, 흡입 시 어지러움",
                 firstAid: "흡입 시 신선한 공기, 피부·눈에 닿으면 물로 세척, 증상 지속 시 의사 진료",
                 precaution: "불꽃·열기·정전기 주의, 밀폐용기 보관",
-                img: "img/msds_에탄올.jpg"
+                img: "img/msds_아이소옥탄.jpg"
             },
-            "구연산나트륨(무수)": {
-                chemNameKor: "구연산나트륨(무수)",
+            "2-프로판올": {
+                chemNameKor: "프로판올",
                 casNo: "68-04-2",
                 hazardInfo: "눈·피부 자극, 흡입 시 호흡기 자극",
                 firstAid: "노출 부위 물로 세척, 증상 지속 시 의사 진료",
                 precaution: "먼지 흡입 주의, 보호장비 착용",
-                img: "img/msds_구연산나트륨.jpg"
+                img: "img/msds_프로판올.jpg"
             },
-            "탄산칼슘": {
-                chemNameKor: "탄산칼슘",
+            "에틸렌글리콜": {
+                chemNameKor: "에틸렌글리콜",
                 casNo: "471-34-1",
                 hazardInfo: "눈·호흡기 자극, 대량 흡입 시 건강 영향",
                 firstAid: "노출 부위 물로 세척, 흡입 시 신선한 공기",
                 precaution: "먼지 발생 최소화, 보호장비 착용",
-                img: "img/msds_탄산칼슘.jpg"
-            },
-            "아이오딘화 칼륨": {
-                chemNameKor: "아이오딘화 칼륨",
-                casNo: "7681-11-0",
-                hazardInfo: "눈·피부 자극, 과다 노출 시 갑상선 영향",
-                firstAid: "노출 부위 물로 세척, 증상 지속 시 의사 진료",
-                precaution: "습기·광선 차단, 보호장비 착용",
-                img: "img/msds_아이오딘화칼륨.jpg"
-            },
-            "염화 칼슘": {
-                chemNameKor: "염화 칼슘",
-                casNo: "10043-52-4",
-                hazardInfo: "피부·눈 자극, 흡입 시 호흡기 자극",
-                firstAid: "노출 부위 물로 세척, 증상 지속 시 의사 진료",
-                precaution: "습기 차단, 보호장비 착용",
-                img: "img/msds_염화칼슘.jpg"
-            },
-            "수산화나트륨": {
-                chemNameKor: "수산화나트륨",
-                casNo: "1310-73-2",
-                hazardInfo: "강한 부식성, 피부·눈 심각한 손상, 흡입 시 호흡기 손상",
-                firstAid: "피부·눈 노출 즉시 다량의 물로 15분 이상 세척, 오염의복 제거, 즉시 의사 진료",
-                precaution: "완전 보호장비 착용, 환기, 산과 반응 주의",
-                img: "img/msds_수산화나트륨.jpg"
+                img: "img/msds_에틸렌글리콜.jpg"
             }
-            "폴리비닐알콜": {
-                chemNameKor: "폴리비닐알콜",
-                casNo: "9002-89-5",
-                hazardInfo: "열, 스파크, 화염 등 점화원 피해야",
-                firstAid: "피부·눈 노출 즉시 다량의 물로 15분 이상 세척, 오염의복 제거, 즉시 의사 진료",
-                precaution: "ㅇ",
-                img: "img/msds_수산화나트륨.jpg"
-            }
-            "수산화나트륨": {
-                chemNameKor: "수산화나트륨",
-                casNo: "1310-73-2",
-                hazardInfo: "강한 부식성, 피부·눈 심각한 손상, 흡입 시 호흡기 손상",
-                firstAid: "피부·눈 노출 즉시 다량의 물로 15분 이상 세척, 오염의복 제거, 즉시 의사 진료",
-                precaution: "완전 보호장비 착용, 환기, 산과 반응 주의",
-                img: "img/msds_수산화나트륨.jpg"
-            }
-            "수산화나트륨": {
-                chemNameKor: "수산화나트륨",
-                casNo: "1310-73-2",
-                hazardInfo: "강한 부식성, 피부·눈 심각한 손상, 흡입 시 호흡기 손상",
-                firstAid: "피부·눈 노출 즉시 다량의 물로 15분 이상 세척, 오염의복 제거, 즉시 의사 진료",
-                precaution: "완전 보호장비 착용, 환기, 산과 반응 주의",
-                img: "img/msds_수산화나트륨.jpg"
-            }
-        };
+        }
 
         let model;
         let recognizedChemical = "";
@@ -274,8 +226,7 @@
             initTeachableMachine();
         });
 
-        // Teachable Machine 모델 URL (변경!)'
-        const modelURL = "https://teachablemachine.withgoogle.com/models/ohpUhTOtu/";
+        // Teachable Machine 모델 URL (변경!)
         const modelURL = "https://teachablemachine.withgoogle.com/models/0FUMnMjtW/";
 
         async function initTeachableMachine() {
